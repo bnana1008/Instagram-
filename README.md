@@ -17,7 +17,15 @@
 - مكتبة pyTelegramBotAPI
 - مكتبة phonenumbers
 
-## التثبيت
+## التثبيت السريع
+
+### الطريقة الأولى: استخدام سكريبت الإعداد
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+### الطريقة الثانية: الإعداد اليدوي
 
 1. استنسخ المشروع:
 ```bash
@@ -32,15 +40,26 @@ pip install -r requirements.txt
 
 3. احصل على توكن البوت من [@BotFather](https://t.me/BotFather) في تليجرام
 
-4. افتح ملف `account_recovery_bot.py` وضع التوكن:
+4. أنشئ ملف التكوين:
+```bash
+cp config_template.py config.py
+```
+
+5. افتح ملف `config.py` وضع التوكن:
 ```python
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # ضع توكن البوت هنا
+BOT_TOKEN = "YOUR_ACTUAL_BOT_TOKEN_HERE"
 ```
 
 ## تشغيل البوت
 
 ```bash
 python account_recovery_bot.py
+```
+
+## اختبار البوت (بدون توكن)
+
+```bash
+python demo_responses.py
 ```
 
 ## طريقة الاستخدام
